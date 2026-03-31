@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class KillSpike : MonoBehaviour
 {
+    public float damage = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,9 +16,7 @@ public class KillSpike : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision);
-        Destroy(collision.gameObject);
-    }
+    private void OnTriggerEnter2D(Collider2D collision) =>
+        // Destroy(collision.gameObject);
+        collision.GetComponent<PlayerHealth>().AddDamage(damage);
 }
