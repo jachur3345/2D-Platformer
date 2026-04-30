@@ -25,12 +25,10 @@ public class UIHealthDisplay : MonoBehaviour
 
     public void OnHealthChanged(float newHealth, float amountChanged)
     {
-        //Debug.Log("On Health Changed Event");
+        //Debug.Log
         healthText.text = newHealth.ToString();
     }
 
     //Kiedy event zostanie wywolany
     //zmienic napis
-
-    
 }
