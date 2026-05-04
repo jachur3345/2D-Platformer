@@ -1,24 +1,30 @@
 using TMPro;
 using UnityEngine;
 
-public class UI_CoinDisplay : MonoBehaviour
+public class UICoinDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    public CoinComponent coinComp;
+    //Referencja do tekstu
+    //Referencja do PlayerHealth
+    public TextMeshProUGUI CoinText;
+    public CoinComponent CoinComponent;
 
-    private void Awake()
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        coinComp.OnCoinChanged += CoinComp_OnCoinChanged;
-        coinComp.OnCoinInit += CoinComp_OnCoinInit;
+        //Zacząć nasłuchiwać player health event
+        CoinComponent.OnCoinChanged += OnCoinChanged;
+        CoinComponent.OnCoinInit += OnCoinChanged;
     }
 
-    private void CoinComp_OnCoinInit(int amount, int changedAmount)
+
+
+    public void OnCoinChanged(int newCoin, int amountChanged)
     {
-        text.text = amount.ToString();
+        //Debug.Log
+        CoinText.text = newCoin.ToString();
     }
 
-    private void CoinComp_OnCoinChanged(int amount, int changedAmount)
-    {
-        text.text = amount.ToString();
-    }
+    //Kiedy event zostanie wywolany
+    //zmienic napis
 }

@@ -16,12 +16,13 @@ public class CoinComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
-    public void AddPoints(int amomunt)
+    public void AddPoints(int amount)
     {
-        points += amomunt;
-        OnCoinChanged?.Invoke(points, amomunt);
+        points += amount;
+        OnCoinChanged?.Invoke(points, amount);
         //Debug.Log(points);   
     }
 }
