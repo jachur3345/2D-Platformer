@@ -8156,6 +8156,14 @@ PrefabInstance:
       propertyPath: CoinComponent
       value: 
       objectReference: {fileID: 3390712793719639961}
+    - target: {fileID: 7545988114834449609, guid: 9bb776742758ad446bb206461dc1f0f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -388.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545988114834449609, guid: 9bb776742758ad446bb206461dc1f0f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7594836524327778510, guid: 9bb776742758ad446bb206461dc1f0f9, type: 3}
       propertyPath: playerHealth
       value: 
