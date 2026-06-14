@@ -12,4 +12,9 @@ public class LevelPortal : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
     }
+    public class LevelPortal : SceneOpener
+    {
+        public string lvlToOpen;
+        private void OnTriggerEnter2D(Collider2D other) => SceneManager.LoadScene(lvlToOpen);
+    }
 }
